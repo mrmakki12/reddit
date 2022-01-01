@@ -1,0 +1,7 @@
+.posts-container {
+    display: flex;
+    /* height: 750px; */
+    background-color: cornflowerblue;
+    margin: 25px;
+}
+
