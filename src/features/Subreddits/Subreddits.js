@@ -1,15 +1,14 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { selectSelectedSubreddit, selectSubreddits } from "./subredditsSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectSelectedSubreddit, setSubreddit, selectSubreddits } from "./subredditsSlice";
 import './subreddits.css';
 
 export const Subreddits = () => {
 
     const subreddits = useSelector(selectSubreddits);
 
-    const selectedSubreddit = useSelector(selectSelectedSubreddit);
+    const dispatch = useDispatch();
 
-    const [subreddit, setSubreddit] = useState('');
+    const selectedSubreddit = useSelector(selectSelectedSubreddit);
 
     return (
         <section className="subreddits-container">
@@ -19,9 +18,9 @@ export const Subreddits = () => {
             {
                 subreddits.map(subreddit => {
                     return (
-                        <div className="subreddit">
+                        <div key={subreddit.url} className={subreddit.url === selectedSubreddit ? 'selected subreddit' : 'subreddit'} onClick={() => dispatch(setSubreddit(subreddit.url.toString()))}>
                             <div className="subreddit-image-container">
-                                <img src={subreddit.img} />
+                                <img src={subreddit.img} alt={subreddit.name + ' icon'}/>
                             </div>
                             <h3>{subreddit.name}</h3>
                         </div>

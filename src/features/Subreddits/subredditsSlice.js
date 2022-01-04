@@ -6,113 +6,133 @@ const subredditSlice = createSlice({
 
     initialState: {
         
-        selectedSubreddit: '',
+        selectedSubreddit: '/r/Holup',
 
         subreddits: [
             {
-                url: '/r/Home/',
+                url: '/r/Home',
                 name: 'Home',
                 img: '/images/redditLogo.png'
             },
             {
-                url: '/r/News/',
+                url: '/r/News',
                 name: 'News',
                 img: '/images/news.png'
             },
             {
-                url: '/r/technews/',
+                url: '/r/technews',
                 name: 'Tech News',
                 img: '/images/redditLogo.png'
             },
             {
-                url: '/r/nba/',
+                url: '/r/nba',
                 name: 'NBA',
                 img: '/images/nba.png'
             },
             {
-                url: '/r/interestingasfuck/',
+                url: '/r/interestingasfuck',
                 name: 'Interesting As Fuck',
                 img: '/images/interestingasf.png'
             },
             {
-                url: '/r/Holup/',
+                url: '/r/Holup',
                 name: 'Holup',
                 img: '/images/holup.png'
             },
             {
-                url: '/r/Unexpected/',
+                url: '/r/Unexpected',
                 name: 'Unexpected',
                 img: '/images/unexpected.png'
             },
             {
-                url: '/r/PublicFreakout/',
+                url: '/r/PublicFreakout',
                 name: 'Public Freakout',
                 img: '/images/public.png'
             },
             {
-                url: '/r/nextfuckinglevel/',
+                url: '/r/nextfuckinglevel',
                 name: 'Next Fucking Level',
                 img: '/images/nextlevel.png'
             },
             {
-                url: '/r/TooAfraidToAsk/',
+                url: '/r/TooAfraidToAsk',
                 name: 'Too Afraid To Ask',
                 img: '/images/tooafraid.png'
             },
             {
-                url: '/r/aww/',
+                url: '/r/aww',
                 name: 'Aww',
                 img: '/images/aww.jpg'
             },
             {
-                url: '/r/NoStupidQuestions/',
+                url: '/r/NoStupidQuestions',
                 name: 'No such thing as stupid questions',
                 img: '/images/questions.png'
             },
             {
-                url: '/r/HumansBeingBros/',
+                url: '/r/HumansBeingBros',
                 name: 'Humans Being Bros',
                 img: '/images/bros.png'
             },
             {
-                url: '/r/AmItheAsshole/',
+                url: '/r/AmItheAsshole',
                 name: 'Am I The Asshole',
                 img: '/images/asshole.png'
             },
             {
-                url: '/r/Damnthatsinteresting/',
+                url: '/r/Damnthatsinteresting',
                 name: 'Damn Thats Interesting',
                 img: '/images/damn.png'
             },
             {
-                url: '/r/wallstreetbets/',
+                url: '/r/wallstreetbets',
                 name: 'wallstreetbets',
                 img: '/images/wallstreet.png'
             },
             {
-                url: '/r/webdev/',
+                url: '/r/webdev',
                 name: 'webdev: reddit for web developers',
                 img: '/images/webdev.jpg'
             },
             {
-                url: '/r/Libertaian/',
+                url: '/r/Libertaian',
                 name: 'Libertarian',
                 img: '/images/libertarian.png'
             },
             {
-                url: '/r/3Dmodeling/',
+                url: '/r/3Dmodeling',
                 name: '3Dmodeling',
                 img: '/images/models.png'
             }, 
             {
-                url: '/r/NatureIsFuckingLit/',
+                url: '/r/NatureIsFuckingLit',
                 name: 'Nature Is Fucking Lit',
                 img: 'images/nature.png'
             },
             {
                 url: '/r/sadcringe',
                 name: 'Sad Cringe',
-                img: 'images/sad.png'
+                img: '/images/sad.png'
+            }, 
+            {
+                url: '/r/AskReddit',
+                name: 'Ask Reddit...',
+                img: '/images/ask.png'
+            }, 
+            {
+                url: '/r/todayilearned',
+                name: 'Today I Learned',
+                img: '/images/today.png'
+            },
+            {
+                url: '/r/dating',
+                name: 'Dating',
+                img: '/images/dating.png'
+            }, 
+            {
+                url: '/r/therewasasattempt',
+                name: 'There Was an Attempt',
+                img: '/images/attempt.png'
             }
         ]
 
