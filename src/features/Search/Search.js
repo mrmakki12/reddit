@@ -6,6 +6,7 @@ import './search.css';
 export const Search = () => {
     
     const [search, setSearch] = useState('');
+
     const dispatch = useDispatch();
 
     return (
@@ -20,7 +21,7 @@ export const Search = () => {
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                 />
-                <div onClick={() => dispatch(setSearchTerm(search))} className="nav-search-btn">
+                <div className="nav-search-btn" onClick={() => dispatch(setSearchTerm(search))}>
                     <img src='/images/search-tool.png' alt='search' />
                 </div>
             </form>

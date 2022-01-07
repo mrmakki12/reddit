@@ -3,11 +3,24 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const getPosts = createAsyncThunk(
     'posts/getPosts',
     async (url) => {
-        const response = await fetch(`https://www.reddit.com${url}.json`);
+        const response = await fetch(`https://www.reddit.com${url}.json`,{
+            mode: 'cors'
+        });
         const json = await response.json();
         const posts = json.data.children;
+        posts.forEach(post => {
+            post.data.myComments = [/*try fetch the comments here */];
+            post.data.showComments = false;
+        });
         console.log(posts[0])
         return posts;
+    }
+)
+
+const getComments = createAsyncThunk(
+    'posts/getComments',
+    async () => {
+
     }
 )
 
@@ -21,7 +34,7 @@ const postsSlice = createSlice({
 
         isLoadingPosts: false,
 
-        failedLoadingPosts: false
+        failedLoadingPosts: false,
 
     },
 
@@ -35,7 +48,7 @@ const postsSlice = createSlice({
 
     extraReducers: {
 
-        [getPosts.pending]: (state, action) => {
+        [getPosts.pending]: (state) => {
             state.isLoadingPosts = true;
             state.failedLoadingPosts = false;
         },
@@ -46,10 +59,10 @@ const postsSlice = createSlice({
             state.posts = action.payload;
         },
 
-        [getPosts.rejected]: (state, action) => {
+        [getPosts.rejected]: (state) => {
             state.isLoadingPosts = false;
             state.failedLoadingPosts = true;
-        }
+        },
 
     }
 

@@ -11,7 +11,8 @@ export const store = configureStore({
 
     subreddit: subredditSlice,
 
-    posts: postsSlice
+    posts: postsSlice,
+
   },
 
 });
