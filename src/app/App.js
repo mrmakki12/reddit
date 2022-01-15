@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search } from '../features/Search/Search';
+import { Header } from '../features/Header/Header';
 import { Posts } from '../features/Posts/Posts';
 import './App.css';
 import { Subreddits } from '../features/Subreddits/Subreddits';
@@ -7,7 +7,7 @@ import { Subreddits } from '../features/Subreddits/Subreddits';
 function App() {
   return (
     <div className="App">
-      <Search />
+      <Header />
       <Posts />
       <Subreddits />
     </div>

@@ -3,24 +3,16 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const getPosts = createAsyncThunk(
     'posts/getPosts',
     async (url) => {
+
         const response = await fetch(`https://www.reddit.com${url}.json`,{
             mode: 'cors'
         });
+
         const json = await response.json();
+
         const posts = json.data.children;
-        posts.forEach(post => {
-            post.data.myComments = [/*try fetch the comments here */];
-            post.data.showComments = false;
-        });
-        console.log(posts[0])
+        console.log(posts)
         return posts;
-    }
-)
-
-const getComments = createAsyncThunk(
-    'posts/getComments',
-    async () => {
-
     }
 )
 
