@@ -6,7 +6,7 @@ const subredditSlice = createSlice({
 
     initialState: {
         
-        selectedSubreddit: '/r/News',
+        selectedSubreddit: '/r/aww',
 
         subreddits: [
             {
